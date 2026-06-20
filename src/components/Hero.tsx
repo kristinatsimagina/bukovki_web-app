@@ -40,20 +40,37 @@ export default function Hero() {
         <Image src="/images/typography.png" alt="Старая Типография" fill style={{ objectFit: "contain" }} />
       </div>
 
-      {/* Котевич — правый центр (заглушка) */}
+      {/* Котевич — правый центр */}
       <div className="sticker" style={{
-        right: "4%", top: "42%", width: 130, height: 170,
+        right: "3%", top: "45%", width: 160, height: 200,
         animationDelay: "1.8s", animationDuration: "4s"
       }}>
-        <Placeholder label="Котевич" color="#FFE0B2" />
+        <Image src="/images/kotevich.png" alt="Котевич" fill style={{ objectFit: "contain" }} />
       </div>
 
-      {/* Мотылёк — верх */}
+      {/* Мотылёк 1 — верх слева */}
       <div className="sticker" style={{
-        left: "42%", top: "4%", width: 60, height: 60,
+        left: "32%", top: "6%", width: 70, height: 70,
         animationDelay: "2.5s", animationDuration: "3s"
       }}>
-        <Placeholder label="🦋" color="#F8BBD9" />
+        <Image src="/images/butterfly.png" alt="Мотылёк" fill style={{ objectFit: "contain" }} />
+      </div>
+
+      {/* Мотылёк 2 — правый низ, зеркальный */}
+      <div className="sticker" style={{
+        right: "28%", bottom: "10%", width: 55, height: 55,
+        animationDelay: "1s", animationDuration: "3.5s",
+        transform: "scaleX(-1)"
+      }}>
+        <Image src="/images/butterfly.png" alt="Мотылёк" fill style={{ objectFit: "contain" }} />
+      </div>
+
+      {/* Куст 2 — правый низ */}
+      <div className="sticker" style={{
+        right: "22%", bottom: "2%", width: 160, height: 160,
+        animationDelay: "3s", animationDuration: "5s"
+      }}>
+        <Image src="/images/bush.png" alt="Куст" fill style={{ objectFit: "contain" }} />
       </div>
 
       {/* === ТЕКСТ И CTA === */}
