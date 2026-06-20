@@ -1,73 +1,59 @@
 "use client";
+import Image from "next/image";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-white flex items-center justify-center">
 
-      {/* === ЭЛЕМЕНТЫ КОЛЛАЖА (заглушки) === */}
+      {/* === ЭЛЕМЕНТЫ КОЛЛАЖА === */}
 
-      {/* Котевич — внизу слева */}
+      {/* Дерево — слева */}
       <div className="sticker" style={{
-        left: "5%", bottom: "10%", width: 160, height: 200,
-        animationDelay: "0s", animationDuration: "4s"
+        left: "-2%", top: "5%", width: 320, height: 380,
+        animationDelay: "0s", animationDuration: "5s"
+      }}>
+        <Image src="/images/tree.png" alt="Дерево" fill style={{ objectFit: "contain" }} />
+      </div>
+
+      {/* Куст — справа внизу */}
+      <div className="sticker" style={{
+        right: "2%", bottom: "8%", width: 260, height: 260,
+        animationDelay: "1.2s", animationDuration: "4.5s"
+      }}>
+        <Image src="/images/bush.png" alt="Куст" fill style={{ objectFit: "contain" }} />
+      </div>
+
+      {/* Куст — слева внизу (тот же, зеркальный) */}
+      <div className="sticker" style={{
+        left: "5%", bottom: "5%", width: 180, height: 180,
+        animationDelay: "2s", animationDuration: "5.5s",
+        transform: "scaleX(-1)"
+      }}>
+        <Image src="/images/bush.png" alt="Куст" fill style={{ objectFit: "contain" }} />
+      </div>
+
+      {/* Старая Типография — правый верх */}
+      <div className="sticker" style={{
+        right: "4%", top: "5%", width: 220, height: 260,
+        animationDelay: "0.5s", animationDuration: "4.2s"
+      }}>
+        <Image src="/images/typography.png" alt="Старая Типография" fill style={{ objectFit: "contain" }} />
+      </div>
+
+      {/* Котевич — правый центр (заглушка) */}
+      <div className="sticker" style={{
+        right: "4%", top: "42%", width: 130, height: 170,
+        animationDelay: "1.8s", animationDuration: "4s"
       }}>
         <Placeholder label="Котевич" color="#FFE0B2" />
       </div>
 
-      {/* Дерево — слева по центру */}
+      {/* Мотылёк — верх */}
       <div className="sticker" style={{
-        left: "2%", top: "15%", width: 140, height: 280,
-        animationDelay: "1.2s", animationDuration: "5s"
-      }}>
-        <Placeholder label="Дерево" color="#C8E6C9" />
-      </div>
-
-      {/* Домик — правый верх */}
-      <div className="sticker" style={{
-        right: "8%", top: "8%", width: 150, height: 160,
-        animationDelay: "0.5s", animationDuration: "4.5s"
-      }}>
-        <Placeholder label="Домик" color="#BBDEFB" />
-      </div>
-
-      {/* Мотылёк — верх по центру */}
-      <div className="sticker" style={{
-        left: "45%", top: "5%", width: 60, height: 60,
-        animationDelay: "2s", animationDuration: "3s"
+        left: "42%", top: "4%", width: 60, height: 60,
+        animationDelay: "2.5s", animationDuration: "3s"
       }}>
         <Placeholder label="🦋" color="#F8BBD9" />
-      </div>
-
-      {/* Цветы — правый низ */}
-      <div className="sticker" style={{
-        right: "6%", bottom: "12%", width: 120, height: 120,
-        animationDelay: "0.8s", animationDuration: "5.5s"
-      }}>
-        <Placeholder label="Цветы" color="#F0F4C3" />
-      </div>
-
-      {/* Куст — правый центр */}
-      <div className="sticker" style={{
-        right: "3%", top: "40%", width: 100, height: 110,
-        animationDelay: "1.5s", animationDuration: "4.2s"
-      }}>
-        <Placeholder label="Куст" color="#C8E6C9" />
-      </div>
-
-      {/* Ягоды — левый низ */}
-      <div className="sticker" style={{
-        left: "20%", bottom: "5%", width: 80, height: 80,
-        animationDelay: "2.5s", animationDuration: "3.8s"
-      }}>
-        <Placeholder label="Ягоды" color="#FFCDD2" />
-      </div>
-
-      {/* Звёздочки — верх справа */}
-      <div className="sticker" style={{
-        right: "25%", top: "10%", width: 50, height: 50,
-        animationDelay: "3s", animationDuration: "3.2s"
-      }}>
-        <Placeholder label="✨" color="#FFF9C4" />
       </div>
 
       {/* === ТЕКСТ И CTA === */}
@@ -97,6 +83,7 @@ export default function Hero() {
 }
 
 function Placeholder({ label, color }: { label: string; color: string }) {
+  // Временная заглушка до получения иллюстрации
   return (
     <div
       className="w-full h-full rounded-2xl flex items-center justify-center text-sm text-gray-500 font-medium"
